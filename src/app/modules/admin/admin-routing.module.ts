@@ -1,0 +1,54 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './component/about/about.component';
+import { AdminDashboardComponent } from './component/admin-dashboard/admin-dashboard.component';
+import { AppointmentServicesComponent } from './component/appointment-services/appointment-services.component';
+import { ContactComponent } from './component/contact/contact.component';
+import { DoctorservicesComponent } from './component/doctorservices/doctorservices.component';
+import { HomeComponent } from './component/home/home.component';
+import { AddPatientComponent } from './component/add-patient/add-patient.component';
+import { GetallpatientsComponent } from './component/getallpatients/getallpatients.component';
+import { PatientServicesComponent } from './component/patient-services/patient-services.component';
+import { AddDoctorComponent } from './component/add-doctor/add-doctor.component';
+import { GetalldocotorsComponent } from './component/getalldocotors/getalldocotors.component';
+import { FindDoctorByIdComponent } from './component/find-doctor-by-id/find-doctor-by-id.component';
+import { FindPatientbyIdComponent } from './component/find-patientby-id/find-patientby-id.component';
+import { DeletePatientComponent } from './component/delete-patient/delete-patient.component';
+import { DeleteDoctorComponent } from './component/delete-doctor/delete-doctor.component';
+import { AddAppointmentComponent } from './component/add-appointment/add-appointment.component';
+import { DeleteAppComponent } from './component/delete-app/delete-app.component';
+import { UpdateAptComponent } from './component/update-apt/update-apt.component';
+import { FindApmntComponent } from './component/find-apmnt/find-apmnt.component';
+
+const routes: Routes = [
+
+  {path:'',component:AdminDashboardComponent,
+    children:[
+    {path:'home',component:HomeComponent},
+    {path:'contact',component:ContactComponent},
+    {path:'about',component:AboutComponent},
+    {path:'patserv',component:PatientServicesComponent},
+    {path:'docserv',component:DoctorservicesComponent},
+    {path:'pologyserv',component:AppointmentServicesComponent},
+    {path:'',redirectTo:"/admin-dash/contact",pathMatch:"full"},
+    {path:'add-patient',component:AddPatientComponent},
+    {path:'all-patient',component:GetallpatientsComponent},
+    {path:'add-doctor',component:AddDoctorComponent},
+    {path:'allD',component:GetalldocotorsComponent},
+    {path:'idByDoctor',component:FindDoctorByIdComponent},
+    {path:'idByPat',component:FindPatientbyIdComponent},
+    {path:'deletePat',component:DeletePatientComponent},
+    {path:'deleteDoctor',component:DeleteDoctorComponent},
+    {path:'add-apmnt',component:AddAppointmentComponent},
+    {path:'del-apmnt',component:DeleteAppComponent},
+    {path:'update-apmnt',component:UpdateAptComponent},
+    {path:'find-apmnt',component:FindApmntComponent}
+  ]},
+  
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class AdminRoutingModule { }
