@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MadeAppointmentComponent } from './made-appointment.component';
+import { GetTestByIdComponent } from './get-test-by-id.component';
 
-describe('MadeAppointmentComponent', () => {
-  let component: MadeAppointmentComponent;
-  let fixture: ComponentFixture<MadeAppointmentComponent>;
+describe('GetTestByIdComponent', () => {
+  let component: GetTestByIdComponent;
+  let fixture: ComponentFixture<GetTestByIdComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MadeAppointmentComponent ]
+      declarations: [ GetTestByIdComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MadeAppointmentComponent);
+    fixture = TestBed.createComponent(GetTestByIdComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

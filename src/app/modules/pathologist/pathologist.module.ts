@@ -8,6 +8,11 @@ import { AddtestComponent } from './component/addtest/addtest.component';
 import { AppointmentstatusComponent } from './component/appointmentstatus/appointmentstatus.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { RemoveTestComponent } from './component/remove-test/remove-test.component';
+import { GetAllTestsComponent } from './component/get-all-tests/get-all-tests.component';
+import { GetTestByIdComponent } from './component/get-test-by-id/get-test-by-id.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,11 +22,17 @@ import { FooterComponent } from './component/footer/footer.component';
     AddtestComponent,
     AppointmentstatusComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RemoveTestComponent,
+    GetAllTestsComponent,
+    GetTestByIdComponent
   ],
   imports: [
     CommonModule,
-    PathologistRoutingModule
+    PathologistRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class PathologistModule { }

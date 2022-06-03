@@ -9,7 +9,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GetallappointmentComponent } from './component/getallappointment/getallappointment.component';
 import { EditMyselfComponent } from './component/edit-myself/edit-myself.component';
-import { FooterComponent } from './component/footer/footer.component'
+import { FooterComponent } from './component/footer/footer.component';
+import { UpdateAppointmentComponent } from './component/update-appointment/update-appointment.component';
+import { GetAlltestsComponent } from './component/get-alltests/get-alltests.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FooterComponent } from './component/footer/footer.component'
     PatientDashboardComponent,
     GetallappointmentComponent,
     EditMyselfComponent,
-    FooterComponent
+    FooterComponent,
+    UpdateAppointmentComponent,
+    GetAlltestsComponent
   ],
   imports: [
     CommonModule,

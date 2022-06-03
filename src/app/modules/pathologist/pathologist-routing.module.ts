@@ -6,9 +6,12 @@ import { HomeComponent } from '../admin/component/home/home.component';
 import { AddtestComponent } from './component/addtest/addtest.component';
 import { AppointmentstatusComponent } from './component/appointmentstatus/appointmentstatus.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { GetAllTestsComponent } from './component/get-all-tests/get-all-tests.component';
+import { GetTestByIdComponent } from './component/get-test-by-id/get-test-by-id.component';
 import { HeaderComponent } from './component/header/header.component';
 import { LabDashboardComponent } from './component/lab-dashboard/lab-dashboard.component';
 import { PatientlistComponent } from './component/patientlist/patientlist.component';
+import { RemoveTestComponent } from './component/remove-test/remove-test.component';
 
 const routes: Routes = [
  {path:'',component:LabDashboardComponent,children:[
@@ -20,7 +23,11 @@ const routes: Routes = [
    {path:'addtest',component:AddtestComponent},
    {path:'app-satus',component:AppointmentstatusComponent},
    {path:'pat-list',component:PatientlistComponent},
-   {path:'',redirectTo:"/lab-dash/home",pathMatch:'full'}
+   {path:'',redirectTo:"/lab-dash/home",pathMatch:'full'},
+   {path:'add-test',component:AddtestComponent},
+   {path:'all-tests',component:GetAllTestsComponent},
+   {path:'remove-test',component:RemoveTestComponent},
+   {path:'get-test-byid',component:GetTestByIdComponent}
  ]}
 ];
 

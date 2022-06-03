@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Idoctor } from '../models/doctor';
 import { LoginService } from './login.service';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,11 +13,11 @@ export class DoctorService {
   constructor(private http: HttpClient,private loginserv:LoginService) { }
 
   private MainUrl: string = "http://localhost:9051/";
-  private addDocUrl: string = this.MainUrl +this.loginserv.userName+ "/add";
-  private allDocUrl: string = this.MainUrl + "admin/get"
+  private addDocUrl: string = this.MainUrl +this.loginserv.userName+"/add";
+  private allDocUrl: string = this.MainUrl +"get"
   private getByIdUrl: string = this.MainUrl + "admin/searchid/";
   private getByNameUrl: string = this.MainUrl + "admin/searchname/";
-  private deleteByIdUrl: string = this.MainUrl + "admin/deletebyid/"
+  private deleteByIdUrl: string = this.MainUrl + this.loginserv.userName+"/deletebyid/"
 
   public addDoctorToDatabase(doctor: Idoctor): Observable<Idoctor> {
     

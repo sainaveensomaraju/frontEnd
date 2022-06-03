@@ -9,8 +9,16 @@ import { DoctorService } from 'src/app/services/doctor.service';
 export class DeleteDoctorComponent implements OnInit {
 
   constructor(private docServ:DoctorService) { }
-
+public allDoctors:any=[];
   ngOnInit(): void {
+    this.docServ.getAllDoctorsFromDatabase().subscribe(
+      data=>{
+        if(data !=null)
+        this.allDoctors=data;
+        else
+        alert("no data found")
+      }
+    )
   }
   public chk:boolean=false;
   deletePatient(num:string){

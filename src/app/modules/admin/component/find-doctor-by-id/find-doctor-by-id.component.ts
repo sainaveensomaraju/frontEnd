@@ -22,9 +22,10 @@ export class FindDoctorByIdComponent implements OnInit {
     let id: number = parseInt(num);
     this.docServ.getDoctorFromDatabaseById(id).subscribe(
       data => {
-        this.resDoc = data;
-        if (this.resDoc != null)
+        if (this.resDoc != null){
+          this.resDoc = data;
           this.chk = true;
+        }   
         else {
           alert("No data found")
           this.chk = false
@@ -37,15 +38,15 @@ export class FindDoctorByIdComponent implements OnInit {
     this.chk=false;
     this.docServ.getDoctorFromDatabaseByNmae(name).subscribe(
       data => {
-        this.resDoc = data;
-        if (this.resDoc != null)
+        if (this.resDoc != null){
+          this.resDoc = data;
           this.chk = true;
+        }   
         else {
-          alert("no data found")
-          this.chk = false;
-         
+          alert("No data found")
+          this.chk = false
+          
         }
-
       }
     )
   }

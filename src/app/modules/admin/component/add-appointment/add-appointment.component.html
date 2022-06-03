@@ -15,7 +15,8 @@
                     <div class="from-group" [ngClass]="{'has-error': patId && patId.invalid && patId.touched}">
                         <label for="patId">Select patient</label>
                         <select formControlName="patId" class="form-control inputstl">
-                            <option *ngFor="let p of allPatients" value="{{p.id}}">{{p.firstName}}</option>
+                            <option *ngFor="let c of allPatients" value="{{c.id}}" >{{c.firstName}}</option>
+                          
                         </select>
                     </div>
                 </div>
@@ -26,8 +27,9 @@
                     <div class="from-group" [ngClass]="{'has-error': docId && docId.invalid && docId.touched}">
                         <label for="docId">Select Doctor</label>
                         <select formControlName="docId" class="form-control inputstl">
-                            <option *ngFor="let p of allDoctors" value="{{p.id}}">{{p.firstName}}</option>
+                            <option *ngFor="let p of allDoctors" value="{{p.id}}">{{p.lastName}}</option>
                         </select>
+                        
                     </div>
                 </div>
             </div>
@@ -37,7 +39,7 @@
                     <div class="from-group" [ngClass]="{'has-error': labId && labId.invalid && labId.touched}">
                         <label for="labId">Select Diagnotic Center</label>
                         <select formControlName="labId" class="form-control inputstl">
-                            <option *ngFor="let p of allLabs" value="{{p.id}}">{{p.userName}}</option>
+                            <option *ngFor="let d of allLabs" value="{{d.id}}">{{d.id}}</option>
                         </select>
                     </div>
                 </div>
@@ -60,10 +62,11 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-lg-12  col-xs-12">
                     <button class="btn btn-primary" [disabled]="apmntForm.invalid"
-                        (click)="submit()">Signup</button>&nbsp;
+                        (click)="submit()">Add</button>&nbsp;
                     <button class="btn btn-danger" type="reset">Cancel</button>
                 </div>
             </div>
         </div>
     </form>
 </div>
+<br><br>

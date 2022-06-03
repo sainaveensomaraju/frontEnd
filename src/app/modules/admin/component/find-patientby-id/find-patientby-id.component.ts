@@ -18,11 +18,12 @@ public resPat:any;
     let id=parseInt(num);
     this.patServ.getDoctorFromDatabaseById(id).subscribe(
       data=>{
-        this.resPat=data;
-        if(this.patServ !=null)
-        this.chk=true
+        if(data !=null){
+          this.resPat=data;
+          this.chk=true;
+        }
         else
-        this.chk=false
+        alert("no data found ");
       }
     )
 
@@ -31,11 +32,12 @@ public resPat:any;
     this.chk=false;
     this.patServ.getDoctorFromDatabaseByNmae(num).subscribe(
       data=>{
-        this.resPat=data;
-        if(this.patServ !=null)
-        this.chk=true
+        if(data !=null){
+          this.resPat=data;
+          this.chk=true;
+        }
         else
-        this.chk=false
+        alert("no data found ");
       }
     )
 

@@ -9,6 +9,8 @@ import { EditselfComponent } from './component/editself/editself.component';
 import { AllappointmentsComponent } from './component/allappointments/allappointments.component';
 import { DoctorDashboardComponent } from './component/doctor-dashboard/doctor-dashboard.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +27,10 @@ import { FooterComponent } from './component/footer/footer.component';
   ],
   imports: [
     CommonModule,
-    DoctorRoutingModule
+    DoctorRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class DoctorModule { }

@@ -1,4 +1,5 @@
 export interface Idoctor{
+    
     userName:string,
     password:string,
     age:number,

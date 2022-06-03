@@ -8,7 +8,6 @@ import { DoctorservicesComponent } from './component/doctorservices/doctorservic
 import { HomeComponent } from './component/home/home.component';
 import { AddPatientComponent } from './component/add-patient/add-patient.component';
 import { GetallpatientsComponent } from './component/getallpatients/getallpatients.component';
-import { PatientServicesComponent } from './component/patient-services/patient-services.component';
 import { AddDoctorComponent } from './component/add-doctor/add-doctor.component';
 import { GetalldocotorsComponent } from './component/getalldocotors/getalldocotors.component';
 import { FindDoctorByIdComponent } from './component/find-doctor-by-id/find-doctor-by-id.component';
@@ -19,6 +18,8 @@ import { AddAppointmentComponent } from './component/add-appointment/add-appoint
 import { DeleteAppComponent } from './component/delete-app/delete-app.component';
 import { UpdateAptComponent } from './component/update-apt/update-apt.component';
 import { FindApmntComponent } from './component/find-apmnt/find-apmnt.component';
+import { AllAppointmentComponent } from './component/all-appointment/all-appointment.component';
+
 
 const routes: Routes = [
 
@@ -27,7 +28,6 @@ const routes: Routes = [
     {path:'home',component:HomeComponent},
     {path:'contact',component:ContactComponent},
     {path:'about',component:AboutComponent},
-    {path:'patserv',component:PatientServicesComponent},
     {path:'docserv',component:DoctorservicesComponent},
     {path:'pologyserv',component:AppointmentServicesComponent},
     {path:'',redirectTo:"/admin-dash/contact",pathMatch:"full"},
@@ -42,7 +42,8 @@ const routes: Routes = [
     {path:'add-apmnt',component:AddAppointmentComponent},
     {path:'del-apmnt',component:DeleteAppComponent},
     {path:'update-apmnt',component:UpdateAptComponent},
-    {path:'find-apmnt',component:FindApmntComponent}
+    {path:'find-apmnt',component:FindApmntComponent},
+    {path:'all-apps',component:AllAppointmentComponent}
   ]},
   
 ];

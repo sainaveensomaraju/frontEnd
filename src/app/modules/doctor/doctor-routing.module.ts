@@ -22,7 +22,9 @@ const routes: Routes = [
       {path:'viewall',component:ViewallpatientComponent},
       {path:'header',component:HeaderComponent},
       {path:'footer',component:FooterComponent},
-      {path:'',redirectTo:'/doctor-dash/home',pathMatch:'full'}
+      {path:'',redirectTo:'/doctor-dash/home',pathMatch:'full'},
+      {path:'all-apps',component:AllappointmentsComponent},
+      {path:'view-all-pat',component:ViewallpatientComponent}
     ]
   }
 ];
